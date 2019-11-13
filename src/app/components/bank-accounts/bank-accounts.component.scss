@@ -1,0 +1,52 @@
+accordion{
+    accordion-group{
+        .accordion-toggle{
+            button{
+                font-size: 1.125rem;
+                font-weight: 300;
+                color: #414042;
+                letter-spacing: 0;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+        }
+        .panel-collapse{
+            .card-body{
+                padding: 0;
+            }
+            .border-bottom{
+                border-bottom :.0625rem solid #CCC
+            }
+            .help-text{
+                color : #717171;
+                position: relative;
+                text-decoration: none;
+                border-bottom: dashed .0625rem;
+                font-size: .75rem;
+                letter-spacing: 0;
+            }
+            .account{
+                padding:1em;
+                .account-selection{
+                    text-align:center
+                }
+                .padding-zero{
+                    padding: 0;
+                }
+                .dotted-line{
+                    width:100px;
+                }
+                .rate-dotted{
+                    width:80px;
+                }
+            }
+            .button-group{
+                text-align: end;
+            }
+            .account:hover{
+                background-color:#F7F7F7;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <accordion>
+    <accordion-group [isOpen]="true">
+      <button class="btn btn-link btn-block clearfix" accordion-heading type="button">
+        <div class="pull-left float-left">My bank accounts</div>
+      </button>
+      <div>
+        <div *ngFor="let account of accountDetails;let first = first;let i = index;let last = last;" class="row"
+          [ngClass]="last ? '' : 'border-bottom'" class="account">
+          <div class="row">
+            <div class="account-selection col-md-1 align-self-center col-sm-1 col-1">
+              <input type="radio" (click)="accountSelection(account)" id="account.accountNumber" name="account">
+            </div>
+            <div class="col-md-11 col-sm-11 col-11">
+              <div class="row">
+                <div class="col-md-4 col-sm-4 col-11">
+                  <a href="">{{account.accountType}} (...{{account.accountNumber | slice:4:8}}) </a>
+                  <div class="col padding-zero">
+                    {{ account.balance | currency: account.currency}}
+                  </div>
+                  <div class="help-text padding-zero dotted-line">
+                    Available Balance
+                  </div>
+                </div>
+                <div class="col-md-3 align-self-end col-sm-2 col-12">
+                  {{ account.interestRate}}
+                  <div class="help-text padding-zero rate-dotted">
+                    Interest Rate
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-5 align-self-end col-12 button-group">
+                  <div class="btn-group" btnRadioGroup [(ngModel)]="radioModel">
+                    <a class="btn btn-primary" href="#" role="button"
+                      [ngClass]="accountNo?.accountNumber === account.accountNumber ? '' : 'disabled'"
+                      [routerLink]="[account.accountNumber , 'topup']" [state]="{accountDetails : account}">
+                      Top Up</a>
+                    <a class="btn btn-primary" href="#" role="button"
+                      [routerLink]="[account.accountNumber , 'withdraw']" [state]="{accountDetails : account}"
+                      [ngClass]="accountNo?.accountNumber === account.accountNumber ? '' : 'disabled'">
+                      Withdraw</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </accordion-group>
+  </accordion>
+</div>

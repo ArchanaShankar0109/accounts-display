@@ -1,0 +1,33 @@
+[
+    {
+        "accountNumber": "00000001",
+        "accountType": "SAVINGS",
+        "currency": "USD",
+        "balance": 152932.74,
+        "interestRate": 2.51
+    },
+    {
+        "accountNumber": "00000002",
+        "accountType": "TIME_DEPOSIT",
+        "currency": "EUR",
+        "balance": 9872364.30,
+        "interestRate": 3.21,
+        "expiryDate": "2019-11-12"
+    },
+    {
+        "accountNumber": "00000003",
+        "accountType": "CHECKING",
+        "currency": "GBP",
+        "balance": 4398.74,
+        "interestRate": 0.37, 
+        "overdraft" : null
+    },
+    {
+        "accountNumber": "00000004",
+        "accountType": "CHECKING",
+        "currency": "NOK",
+        "balance": 198765.74,
+        "interestRate": 0.12,
+        "overdraft": 20000
+    }
+]

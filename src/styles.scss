@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@mixin wordWrap {
+    word-wrap: break-word;
+  }
+  @mixin labelDisplay {
+    font-weight:bold;
+  }
+  
+  @mixin warning {
+    font-size: 9px;
+    color: #999;
+    width: 80%;
+    z-index: 1;
+  }
