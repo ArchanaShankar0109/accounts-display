@@ -15,11 +15,11 @@ export class AccountService {
 };
 
   getBankAccounts(): Observable<any> {
-    return this.http.get(`987568/accounts`);
+    return this.http.get(`789654/accounts`);
   }
 
   updateBalance(account, page): Observable<any>{
-    return this.http.post(`api/client/987568/account/${account.accountNumber}/${page}`, 
+    return this.http.post(`api/client/789654/account/${account.accountNumber}/${page}`, 
       account, AccountService.httpOptions);
   }
 }
