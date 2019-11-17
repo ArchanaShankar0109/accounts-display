@@ -16,13 +16,11 @@ export class BankAccountsComponent implements OnInit {
   ngOnInit() {
     console.log(isDevMode());
     this.accountService.getBankAccounts().subscribe(data => {
-      console.log(data, "data");
       this.accountDetails = data;
     });
   }
 
   accountSelection(account){
-    console.log(account , 'account ::');
     this.accountNo = account;
   }
 
