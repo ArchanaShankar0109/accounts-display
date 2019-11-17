@@ -18,18 +18,6 @@ export class AccountService {
     return this.http.get(`987568/accounts`);
   }
 
-  updateBalanceTopUp(account?) : Observable<any>{
-    return this.http.post(`api/client/987568/account/${account.accountNumber}/topup`, 
-      account, AccountService.httpOptions
-    );
-  }
-
-  updateBalanceWithdraw(account?) : Observable<any>{
-    return this.http.post(`api/client/987568/account/${account.accountNumber}/withdraw`, 
-      account, AccountService.httpOptions
-    );
-  }
-
   updateBalance(account, page): Observable<any>{
     return this.http.post(`api/client/987568/account/${account.accountNumber}/${page}`, 
       account, AccountService.httpOptions);
