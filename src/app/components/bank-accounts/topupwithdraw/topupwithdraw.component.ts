@@ -63,7 +63,6 @@ export class TopupwithdrawComponent implements OnInit {
       } else {
         this.messages.warningMessage = "";
         this.accountDetails.balance = this.accountBalance;
-        console.log(this.accountDetails);
       }
     }
   }
