@@ -2,7 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
-## npm install to install all the dependencies before running the application
+## 
+npm install to install all the dependencies before running the application
 
 ## Development server
 
